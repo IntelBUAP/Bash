@@ -9,3 +9,5 @@
 - Un comando de salida.
 
 **Nota**: *Los comandos deberan estar en español y no son validos los alias todo debera estar dentro de un script y ese mismo script debera tener las validaciones necesarias para que no salga de manera repentina.*
+
+Para identificarlos a todos creen cada uno una carpeta cuyo nombre sea nombre-apellido de cada uno y ahi deberan poner su script.bash.
