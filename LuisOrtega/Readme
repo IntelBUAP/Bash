@@ -1,0 +1,2 @@
+Para poder hacer pruebas con el script es importante realizar una copia de la variable $PATH en $PATH_OLD
+Agregar el directorio actual de trabajo a la variable $PATH
