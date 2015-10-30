@@ -1,0 +1,136 @@
+			Comandos de usuario
+
+BUSQUEDA
+
+  NOMBRE
+    busqueda - busca un archivo o directorio
+
+  RESUMEN
+    busqueda <opcion> <parametro>
+
+  DESCRIPCION
+    Busca un archivo o directorio
+
+  <parametro>
+    tamaño
+      Se especifica el tamaño del archivo; 
+      Ejemplo: 
+        +500k - Busca archivos mayores a 500k
+        -500k - Busca archivos mejores a 500k
+
+    nombre
+      Se especifica una cadena con el nombre del archivo;
+      Ejemplo:
+        ejemplo.* - Lista todos los archivos que se llamen 'ejemplo' y que tengan cualquier extensión
+        *.c 	  - Lista cualquier archivo que tenga como extensión '.c'
+        *.* 	  - Lista todos los archivos
+
+    usuario
+      Se especifica una cadena con el nombre del usuario;
+      Ejemplo:
+        roberto - Lista todos los archivos que pertenezcan al usuario 'roberto'
+        
+    permisos
+      Se especifica un entero de tres digitos con los permisos del archivo;
+      Ejemplo:
+	777 - Lista todos los archivos que cuenten con permisos rwxrwxrwx
+	562 - Lista todos los archivos que cuenten con permisos r-xrw--w-
+	 
+    fecha
+      Se especifica un entero que multiplica las horas desde que se modifico
+      Ejemplo:
+	2 - Lista todos los archivos que tengan 48 horas en adelante desde su ultima modificacion
+
+  <opcion>
+    -t Busca todos los archivos en el directorio acutal que cumplan con el <tamaño> especificado
+    -n Busca todos los archivos en el directorio acutal que cumplan con el <nombre> especificado
+    -u Busca todos los archivos en el directorio acutal que cumplan con el <usuario> especificado
+    -p Busca todos los archivos en el directorio acutal que cumplan con los <permisos> especificados
+    -f Busca todos los archivos en el directorio acutal que cumplan con la <fecha> especificada
+
+COMPRESION
+
+  NOMBRE
+    compresion - comprime o descomprime un archivo/directorio
+
+  RESUMEN
+    compresion <opcion> <formato> <archivo/directorio>
+
+  DESCRIPCION
+    Comprime/Descomprime un archivo especificado
+
+  <opcion>
+    -c - comprime un archivo
+    -d - descomprime un archivo
+
+  <formato>
+    targz
+      Comprime/Descomprime un archivo/directorio  en formato .tar.gz
+
+    gzip
+      Comprime/Descomprime un archivo/directorio en formato .gzipg
+
+    zip
+      Comprime un archivo/directorio en formato .zip
+
+    unzip
+      Descomprime un archivo/directorio en formato .zip
+
+    rar
+      Comprime un archivo/directorio en formato .rar
+
+    unrar
+      Descomprime un archivo/directorio en formato .rar
+    
+  <archivo/directorio>
+    nombre del archivo o directorio a comprimir
+
+MOSTRAR
+  NOMBRE
+    mostar - muestra el contenido de una carpeta
+
+  RESUMEN
+    mostrar <carpeta>*
+
+  DESCRIPCION
+    lista el contenido de una carpeta, por default muestra la carpeta principar pero puede recibir la carpeta a listar
+
+  <carpeta> - Opcional
+    Cadena con la carpeta especifica que se quiere listar
+
+MOVER
+  NOMBRE
+    mover - se cambia en directorio de trabajo actual
+
+  RESUMEN
+    mover <directorio>
+
+  DESCRIPCION
+    Cambia del directorio de trabajo actual al directorio especificado como parametro
+
+  <direccion>
+    Cadena con la ruta que se quiere establecer como directorio de trabajo actual
+
+DESPLEGAR
+  NOMBRE
+    deslpegar - muestra el contenido de un archivo
+
+  RESUMEN
+    desplegar <archivo>
+
+  DESCRIPCION
+    muestra en consola el contenido de un archivo
+
+  <archivo>
+    Cadena con el nombre del archivo a desplegar
+
+
+MAN
+  NOMBRE
+    man - Muestra el manual del programa
+
+  RESUMEN
+    man
+
+  DESCRIPCION
+    Muestra cada uno de los comandos que se pueden emplear esta consola  
