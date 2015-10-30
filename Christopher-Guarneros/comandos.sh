@@ -24,21 +24,22 @@ EOF
 
     # Imprimir comandos
     if [[ $opcion == '1' ]]; then
-        echo ">dondeesta {parametros [-name 'nombre'] [-user <nombre>] [<directory> -size <+/-tamaño>] [-mtime -<dias>] [-perm <permisos>]}" 
+        echo ">buscar {parametros [-name 'nombre'] [-user <nombre>] [<directory> -size <+/-tamaño>] [-mtime -<dias>] [-perm <permisos>]}" 
         echo ">compresion {formato-de-compresion <tar, zip, etc>} {nombre-archivo-comprimir} {ruta-archivo-destino}"
         echo ">descompresion {formato-compresion<tar, zip, etc>} {nombre-archivo-comprimir} {ruta-archivo-destino}"
         echo ">listarcolor {ruta}"
         echo ">moverte {ruta}"
-        echo ">mostrar {nombre-archivo}"
+        echo ">mostrar {ruta-a-archivo}"
+        echo ">salir"
     fi
 
     # BUSQUEDA
     if [[ $opcion == '2' ]]; then
-        echo "BUSQUEDA >dondeesta {parametros [-name 'nombre'] [-user <nombre>] [<directory> -size <+/-tamaño>] [-mtime -<dias>] [-perm <permisos>]}"
+        echo "BUSQUEDA >buscar {parametros [-name 'nombre'] [-user <nombre>] [<directory> -size <+/-tamaño>] [-mtime -<dias>] [-perm <permisos>]}"
         read op
         a=( $op )
 
-        if [[ ${a[0]} == 'dondeesta' ]]; then
+        if [[ ${a[0]} == 'buscar' ]]; then
                             
             t=0
             b=""
@@ -50,8 +51,9 @@ EOF
                 b=$b" "$i
                 ((t++))
             done
-            echo $b
-            find $b
+            #EL resultado se muestra en result.txt            
+            find $b > result.txt
+            cat result.txt
         else
             e=$?
             echo "Sintaxis incorrecta."
