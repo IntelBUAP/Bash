@@ -1,8 +1,20 @@
 #!/bin/bash
+function listaComando(){
+	echo "->buscar"
+	echo "->compresion"
+	echo "->mostrar"
+	echo "->mover"
+	echo "->contenido"
+	echo "->listar"
+	echo "->salir"
+	echo ""	
+}
+clear
 echo "Oprime listar para mostrar los comandos disponibles"
+listaComando
 echo -n "-> "
 read opcion
-while [ "$opcion" != "Si" ]; do
+while [ "$opcion" != "salir" ]; do
  
  case $opcion in
     buscar)
@@ -139,8 +151,14 @@ while [ "$opcion" != "Si" ]; do
 	cd $mover 2>/dev/null || echo "No existe el directorio "
 	;;
     listar)
-	echo "Listar"
+	listaComando	
 	;;
+    contenido)
+	echo -n 'Contenido de ->'
+	read archivo
+	cat $archivo 2>/dev/null || echo $archivo "No es un fichero"
+    	;;
+
     *)
         echo "Comando no valido"
 	;;
