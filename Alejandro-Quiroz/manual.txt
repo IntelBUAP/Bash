@@ -1,0 +1,125 @@
+Manual de uso del Intérprete de comandos Quiro-sh
+
+COMANDOS
+      ayuda - Muestra éste documento de uso de comandos y cómo ejecutarlos
+      busca - Realiza busquedas de archivos por tamaño, nombre, usuario, permisos, fechas.
+      comprime - Comprime archivos de tipo .tar.bz, tar.gz, zip, rar.
+      descomprime - Desomprime archivos de tipo .tar.bz, tar.gz, zip, rar.
+      carpeta - Muestra los archivos existentes en la carpteta actual, mostrando los directorios a color distintivo.
+      moverse - Cambiar el directorio de trabajo
+      contenido - Muestra el contenido de un archivo
+      salir - Termina la ejecución del Intérprete
+
+  AYUDA
+  
+    SINOPSIS
+      ayuda       
+
+    DESCRIPCION
+      Despliega éste documento descriptivo del uso del Intérprete de comandos, incluyendo el uso correcto de éstos y los parámetros que soporta.
+
+  BUSCA
+
+    SINOPSIS
+      busca [opcion] [parámetro]
+
+    DESCRIPCION
+      Un comando para realizar busquedas por tamaño, nombre, usuario, permisos, fechas.
+
+    [opcion]
+      -tamano
+          Busqueda por tamaño de archivo con respecto al [parametro]  pueden ser mayores a (+valor) o menores a (-valor) en KB.
+        
+      -nombre
+          Busqueda por nombre de archivo con respecto al [parametro]. Admite el uso de comodines como '*'
+
+      -usuario
+          Busqueda por nombre de usuario con respecto al [parametro]. 
+                
+      -permisos
+          Busqueda por permisos de archivo con respecto al [parametro]. Admite el uso de valores enteros de tres digitos (como 777).    
+     
+      -fecha
+          Busqueda por permisos de archivo con respecto al [parametro], el cual admite un numero entero que especifica la cantidad de dias antes de la fecha actual en que se modificó el archivo.
+ 
+  COMPRIME
+
+    SINOPSIS
+      comprime [formato] [nombre] [archivo/directorio]
+
+    DESCRIPCION
+      Comprime en un [archivo/directorio] en un nuevo archivo con [nombre] específico y con un [formato] compatible
+
+    [formato]
+      -tarbz 
+          Comprime un archivo o directorio en un nuevo archivo con formato .tar.bz
+      -targz
+          Comprime un archivo o directorio en un nuevo archivo con formato .tar.gz
+      -zip
+          Comprime un archivo o directorio en un nuevo archivo con formato .zip
+      -rar
+          Comprime un archivo o directorio en un nuevo archivo con formato .rar
+
+    [nombre]
+      Nombre del archivo comprimido de salida.
+      
+    [archivo/directorio]
+      Nombre del archivo o directorio que se desea comprimir
+
+  DESCOMPRIME
+
+    SINOPSIS
+      descomprime [formato] [archivo] 
+
+    DESCRIPCION
+      Descomprime en la carpeta actual el contenido del [archivo] indicado, el cual tiene un [formato] compatible.
+
+    [formato]
+      -tarbz 
+          Descomprime un archivo con formato .tar.bz
+      -targz
+          Descomprime un archivo con formato .tar.gz
+      -zip
+          Descomprime un archivo con formato .zip
+      -rar
+          Descomprime un archivo con formato .rar
+
+    [archivo]
+      Nombre del archivo comprimido a descomprimir
+        
+  CARPETA
+
+    SINOPSIS
+      carpeta
+
+    DESCRIPCION
+      Un comando para mostrar el nombre de la carpeta actual, así como los archivos y carpetas que contiene, mostrando los directorios a colores.
+
+  MOVERSE
+
+    SINOPSIS
+      moverse [directorio]
+
+    DESCRIPCION
+      Comando que permite cambiar el directorio de trabajo por el especificado por [directorio]
+
+    [directorio]
+      Ruta del directorio al que se desea moverse
+
+  CONTENIDO
+
+    SINOPSIS
+      contenido [archivo]
+
+    DESCRIPCION
+      Un comando que muestre el contenido de un [archivo].
+
+    [archivo]
+      Nombre del archivo con extensión a mostrar.
+
+  SALIR
+    SINOPSIS
+      salir
+
+    DESCRIPCION
+      Única opción para salir del intérprete. No es posible hacerlo con señales SIGINT, SIGQUIT ni SIGSTP.
