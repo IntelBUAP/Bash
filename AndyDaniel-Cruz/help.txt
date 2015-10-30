@@ -1,0 +1,84 @@
+Manual de Usuario
+
+COMANDOS
+  1. contenido [Carpeta] : muestra el contenido de la carpeta.
+     
+     [Carpeta]=(OPCIONAL) puede ser una carpeta o una dirección URL del 
+	       cual se quiere ver su contenido (archivos y carpetas).
+
+     EJEMPLOS
+	-> contenido 
+	-> contenido /User/home/
+  
+  2. ayuda : muestra la ayuda de cada comando.
+
+  3. ver {archivo} : muestra el contenido de un archivo.
+     
+     {archivo}=(OBLIGATORIO) es el nombre del archivo o la dirección hasta 
+	       el archivo con todo y la extension de dicho archivo.
+
+     EJEMPLO
+	-> ver archivo.txt
+	-> ver /Users/archivo.txt
+
+  4. movera {carpeta} : moverse a la carpeta proporcionada.
+
+     {carpeta}=(OBLIGATORIO) debe ser una carpeta para que se pueda dirigir
+  		a ella.
+
+     EJEMPLOS
+	-> movera carpeta
+	-> movera /Users/carpeta
+ 
+  5. compr {Carpeta, Archivo origen} {Archivo destino} {tipo compresion} : 
+		comprime una carpeta o archivo a la extension proporcionada.
+	
+     {Carpeta, Archivo origen}=proporcionar solo el nombre de la carpeta o
+		archivo si es que esta en el directorio actual, si no debe
+		de especificar la URL de la carpeta o archivo a comprimir.
+     {Archivo destino}=Solo proporcione el nombre deseado del archivo 
+		comprimido sin extension ya que lo especificara en el
+		siguiente parametro.
+     {tipo compresión}=es aquí donde se especificara el tipo de compresión.
+
+      EJEMPLOS
+	
+	compr carpeta nombre_archivo tar.gz
+	compr carpeta/* nombre_archivo tar.bz
+	compr archivo nombre_archivo zip
+  
+  6. dcompr {Archivo comprimido} {tipo de descompresion} : 
+		descomprime un archivo con la extension proporcionada.
+	
+     {Archivo comprimido}=proporcionar solo el nombre de el archivo 
+		comprimido si es que esta en el directorio actual, si no debe
+		de especificar la URL de la carpeta con el nombre del 
+		archivo a descomprimir.
+     {tipo descompresión}=es aquí donde se especificara el tipo del 
+		comprimido que se quiere descomprimir.
+
+      EJEMPLOS
+	
+	dcompr nombre_archivo tar.gz
+	dcompr nombre_archivo tar.bz
+	dcompr nombre_archivo zip
+
+
+  7. buscar {dirección de busqueda} {tipo} {parametro} : busca archivos 
+		dado una dirección de inicio.
+
+	{dirección de busqueda}=es la dirección o carpeta donde se iniciara
+		la búsqueda de los archivos.
+	{tipo}=es el tipo de búsqueda, los cuales son [tamaño, permiso, fecha,
+		usuario, nombre] 
+	{parametro}=es el parametro o valor por el que buscara, este debe tener
+		sentido con el tipo.
+
+	EJEMPLOS
+
+		buscar /User/Skynet/ tamaño +10M
+		buscar . usuario Memo
+		buscar / nombre *.c
+		buscar /Users/Home/ fecha +10
+
+  8. salir : salir de Skynet
