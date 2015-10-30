@@ -234,8 +234,6 @@ EOF
                echo "Sintaxis incorrecta."
                echo ""
         fi
-    else
-        echo "comando invalido"
     fi
 
 done
